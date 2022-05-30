@@ -1,4 +1,4 @@
-FROM library/debian:stable-20211011-slim
+FROM library/debian:11.3-slim
 
 RUN apt-get update && apt-get install -y \
   ca-certificates \
