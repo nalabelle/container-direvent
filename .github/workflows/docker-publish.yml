@@ -12,8 +12,20 @@ on:
     branches: [ main ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
+    paths-ignore:
+      - '.github/**'
+      - 'renovate.json'
+      - 'README.md'
   pull_request:
     branches: [ main ]
+    paths-ignore:
+      - '.github/**'
+      - 'renovate.json'
+      - 'README.md'
+
+concurrency:
+  group: ${{ github.head_ref || github.ref  }}
+  cancel-in-progress: true
 
 env:
   # Use docker.io for Docker Hub if empty
