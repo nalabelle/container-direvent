@@ -1,4 +1,4 @@
-FROM library/debian:12.7-slim@sha256:36e591f228bb9b99348f584e83f16e012c33ba5cad44ef5981a1d7c0a93eca22
+FROM library/debian:12.8-slim@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
 
 RUN apt-get update && apt-get install -y \
   ca-certificates \
